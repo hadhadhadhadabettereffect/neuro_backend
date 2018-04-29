@@ -43,11 +43,15 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
 )
 
+THIRD_PARTY_APPS = (
+    'ordered_model',
+)
+
 LOCAL_APPS = (
     'neuro.slides',
 )
 
-INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 # END APP CONFIG
 ###################

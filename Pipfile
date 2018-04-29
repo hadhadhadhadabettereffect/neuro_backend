@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 django = "*"
 django-configurations = "*"
+django-ordered-model = "*"
 
 [dev-packages]
 
