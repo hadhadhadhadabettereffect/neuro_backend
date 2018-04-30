@@ -39,6 +39,7 @@ class Common(Configuration):
     )
 
     LOCAL_APPS = (
+        'neuro.contact',
         'neuro.profiles',
         'neuro.slides',
     )
@@ -69,6 +70,8 @@ class Common(Configuration):
             'APP_DIRS': True,
             'OPTIONS': {
                 'context_processors': [
+                    'neuro.contact.context_processors.contact',
+
                     'django.template.context_processors.debug',
                     'django.template.context_processors.request',
                     'django.contrib.auth.context_processors.auth',
