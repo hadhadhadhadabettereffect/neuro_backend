@@ -39,6 +39,7 @@ class Common(Configuration):
     )
 
     LOCAL_APPS = (
+        'neuro.profiles',
         'neuro.slides',
     )
 
