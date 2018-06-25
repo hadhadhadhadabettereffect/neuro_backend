@@ -20,7 +20,10 @@ class Common(Configuration):
 
     SECRET_KEY = values.SecretValue()
 
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = [
+        'localhost',
+        'li1839-51.members.linode.com',
+    ]
 
     ###################
     # APP CONFIG
@@ -40,6 +43,7 @@ class Common(Configuration):
 
     LOCAL_APPS = (
         'neuro.contact',
+        'neuro.products',
         'neuro.profiles',
         'neuro.slides',
     )
