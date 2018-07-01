@@ -1,0 +1,11 @@
+{% for project in projects  %}
+    <div class="content__inner--scroll">
+        <div class="col">
+            <h2>{{ project.name }}</h2>
+            <p>{{ project.description }}</p>
+        </div>
+        {% for image in project.images.all %}
+            <img src="{{ image.image.url }}">
+        {% endfor %}
+    </div>
+{% endfor %}
