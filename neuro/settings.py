@@ -38,7 +38,6 @@ class Common(Configuration):
     )
 
     THIRD_PARTY_APPS = (
-        'django_extensions',
         'ordered_model',
     )
 
@@ -49,6 +48,7 @@ class Common(Configuration):
         'neuro.products',
         'neuro.profiles',
         'neuro.services',
+        'neuro.story',
         'neuro.work',
     )
 
