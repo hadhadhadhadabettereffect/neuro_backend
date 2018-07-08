@@ -16,7 +16,6 @@ class Product(OrderedModel):
         default=0)
     description = models.TextField(blank=True, max_length=500)
     materials = models.TextField(blank=True, max_length=500)
-    main_image = models.ImageField(upload_to="photos")
     thumbnail = models.ImageField(upload_to="photos")
     detail_1 = models.ImageField(upload_to="photos")
     detail_2 = models.ImageField(upload_to="photos")
