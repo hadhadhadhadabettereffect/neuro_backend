@@ -44,6 +44,7 @@ class Common(Configuration):
     LOCAL_APPS = (
         'neuro.campaign',
         'neuro.contact',
+        'neuro.pages',
         'neuro.press',
         'neuro.products',
         'neuro.profiles',

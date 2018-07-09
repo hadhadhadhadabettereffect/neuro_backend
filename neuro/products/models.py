@@ -28,11 +28,6 @@ class Product(OrderedModel):
         # saving first to ensure self.id != None
         super(Product, self).save(*args, **kwargs)
 
-        new_name = "photos/{}_m.jpg".format(self.id)
-        new_path = os.path.join(Common.MEDIA_ROOT, new_name)
-        os.rename(self.main_image.path, new_path)
-        self.main_image.name = new_name
-
         new_name = "photos/{}_t.jpg".format(self.id)
         new_path = os.path.join(Common.MEDIA_ROOT, new_name)
         os.rename(self.thumbnail.path, new_path)
