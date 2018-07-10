@@ -23,6 +23,7 @@ class Common(Configuration):
     ALLOWED_HOSTS = [
         'localhost',
         'li1839-51.members.linode.com',
+        'neuro-studio.com'
     ]
 
     ###################
