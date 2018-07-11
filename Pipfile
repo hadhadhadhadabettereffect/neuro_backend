@@ -9,6 +9,7 @@ django-configurations = "*"
 django-ordered-model = "*"
 whitenoise = "*"
 pillow = "*"
+django-extensions = "*"
 
 [dev-packages]
 

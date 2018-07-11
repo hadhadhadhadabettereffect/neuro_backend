@@ -40,6 +40,7 @@ class Common(Configuration):
 
     THIRD_PARTY_APPS = (
         'ordered_model',
+        'django_extensions',
     )
 
     LOCAL_APPS = (

@@ -21,9 +21,9 @@ class ProjectImage(models.Model):
     image = models.ImageField(upload_to='images')
 
 
-@receiver(post_save, sender=Project)
-def rewrite_html(sender, instance, **kwargs):
-    projects = Project.objects.all()
-    content = render_to_string('work.html', { 'projects': projects })
-    with open(os.path.join(Common.STATIC_ROOT, 'work.html'), 'w') as f:
-            f.write(content)
+# @receiver(post_save, sender=Project)
+# def rewrite_html(sender, instance, **kwargs):
+#     projects = Project.objects.all()
+#     content = render_to_string('work.html', { 'projects': projects })
+#     with open(os.path.join(Common.STATIC_ROOT, 'work.html'), 'w') as f:
+#             f.write(content)

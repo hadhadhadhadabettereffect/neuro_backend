@@ -1,0 +1,17 @@
+{% load static %}
+<div class="content__inner">
+    <div id="filters">
+        <div class="filter--active" data-action="11" data-id="0">ALL</div>
+        <div class="filter" data-action="11" data-id="1">DRESS</div>
+        <div class="filter" data-action="11" data-id="2">ACCESSORIES</div>
+        <div class="filter" data-action="11" data-id="3">JACKETS</div>
+        <div class="filter" data-action="11" data-id="4">PANTS</div>
+        <div class="filter" data-action="11" data-id="5">TOPS</div>
+        <div class="filter" data-action="11" data-id="6">SHOES</div>
+    </div>
+    {% for p in product_list %}
+    <a class="grid__item">
+        <img src="{{ p.thumbnail.url }}" alt="{{ p.name }}" />
+    </a>
+    {% endfor %}
+</div>

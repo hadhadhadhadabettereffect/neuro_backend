@@ -1,7 +1,0 @@
-{% load static %}
-
-{% for p in product_list %}
-<a class="grid__item">
-    <img src="{% static p.thumbnail %}" alt="{{ p.name }}" />
-</a>
-{% endfor %}
