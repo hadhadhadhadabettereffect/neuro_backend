@@ -7,7 +7,6 @@ name = "pypi"
 django = "*"
 django-configurations = "*"
 django-ordered-model = "*"
-django-configuration = "*"
 whitenoise = "*"
 pillow = "*"
 
