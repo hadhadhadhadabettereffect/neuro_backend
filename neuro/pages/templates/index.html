@@ -1,28 +1,35 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Neuro Studio</title>
-    <style>
-        body {
-            padding: 33% 0 0;
-            text-align: center;
-            letter-spacing: 0.2em;
-        }
-        h1 {
-            margin: 0;
-            font-size: 6rem;
-        }
-        p {
-            font-size: 1.2rem;
-        }
-    </style>
+    <title>neuro</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
 <body>
-    <h1>neuro</h1>
-    <p>coming soon</p>
+    <div class="full" id="home">
+        <video class="video" playsinline autoplay muted loop poster="{% static 'vid-a.jpg' %}">
+            <source src="{% static 'vid-a.mp4' %}" type="video/mp4">
+            <source src="{% static 'vid-a.webm' %}" type="video/webm">
+        </video>
+    </div>
+    <div id="wrap">
+        <div id="content">
+            {% include 'agency.html' %}
+            {% include 'collection.html' %}
+        </div>
+    </div>
+    {% include 'nav.html' %}
+    <div id="lift">
+        <div id="lift__up" data-action="10"></div>
+        <div id="lift__content">
+            {% include 'contact.html' %}
+        </div>
+        <div class="close icon icon-x" data-action="10"></div>
+    </div>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>

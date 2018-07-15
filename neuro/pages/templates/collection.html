@@ -1,2 +1,25 @@
-{% include "products/thumbnails.html" %}
-{% include "press/press.html" %}
+<div id="collection">
+    <div class="slide">
+        <div class="video-wrap">
+            <video class="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" poster="vid-b.jpg">
+                <source src="vid-b.mp4" type="video/mp4" />
+                <source src="vid-b.webm" type="video/webm" />
+            </video>
+        </div>
+        <div class="about">Neuro is a creative agency harnessing advanced technologies to create a sustainable future for the Fashion Industry</div>
+        <a
+            id="contact--agency" data-action="2">CONTACT</a>
+    </div>
+    <div class="slide" style="top: 100%">
+        <!-- campaign info -->
+    </div>
+    <div class="slide" style="top: {{ collection_offsets_1 }}00%">
+        {% include "products/thumbnails.html" %}
+    </div>
+    <div class="slide" style="top: {{ collection_offsets_2 }}00%">
+        {% include "story.html" %}
+    </div>
+    <div class="slide" style="top: {{ collection_offsets_3 }}00%">
+        {% include "press/press.html" %}
+    </div>
+</div>

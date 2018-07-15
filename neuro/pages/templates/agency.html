@@ -1,14 +1,22 @@
-<div class="slide">
-    <div class="video-wrap">
-        <video class="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" poster="media/vid-b.jpg">
-            <source src="media/vid-b.mp4" type="video/mp4" />
-            <source src="media/vid-b.webm" type="video/webm" />
-        </video>
+<div id="agency">
+    <div class="slide">
+        <div class="video-wrap">
+            <video class="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" poster="vid-b.jpg">
+                <source src="vid-b.mp4" type="video/mp4" />
+                <source src="vid-b.webm" type="video/webm" />
+            </video>
+        </div>
+        <div class="about">Neuro is a creative agency harnessing advanced technologies to create a sustainable future for the Fashion Industry</div>
+        <a
+            id="contact--agency" data-action="2">CONTACT</a>
     </div>
-    <div class="about">Neuro is a creative agency harnessing advanced technologies to create a sustainable future for the Fashion Industry</div>
-    <a
-        id="contact--agency" data-action="2">CONTACT</a>
+    <div class="slide" style="top: {{ agency_offsets_1 }}00%">
+        {% include 'services/services.html' %}
+    </div>
+    <div class="slide" style="top: {{ agency_offsets_2 }}00%">
+        {% include "work/work.html" %}
+    </div>
+    <div class="slide" style="top: {{ agency_offsets_3 }}00%">
+        {% include "profiles/team.html" %}
+    </div>
 </div>
-
-{% include "work/work.html" %}
-{% include "profiles/team.html" %}

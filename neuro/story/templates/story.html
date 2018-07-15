@@ -1,0 +1,33 @@
+{% load static %}
+{% for page in pages %}
+<div class="content__inner">
+    {% if page.page_type is 0 %}
+    <div class="col--text">
+        <h2>{{ page.title }}</h2>
+        <p>
+            {{ page.text }}
+        </p>
+    </div>
+    <div class="col--img">
+        <img src="{{ page.image_a.image.url }}" />
+    </div>
+    {% else %}
+    <div class="slider-wrap">
+        <div class="slider__top">
+            <div class="slider__bar" data-action="13"></div>
+            <img src="{{ page.image_a.image.url }}" />
+        </div>
+        <div class="slider__btm">
+            <img src="{{ page.image_b.image.url }}" />
+        </div>
+
+    </div>
+    {% endif %}
+</div>
+{% endfor %}
+
+<ol id="story-nav">
+    {% for page in pages %}
+    <li class="story__link" data-action="12" data-id="{{ page.id }}">{{ page.id }}</li>
+    {% endfor %}
+</ol>
