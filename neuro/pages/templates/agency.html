@@ -1,9 +1,11 @@
+{% load static %}
+
 <div id="agency">
     <div class="slide">
         <div class="video-wrap">
-            <video class="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" poster="vid-b.jpg">
-                <source src="vid-b.mp4" type="video/mp4" />
-                <source src="vid-b.webm" type="video/webm" />
+            <video class="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" poster="{% static 'vid-b.jpg' %}">
+                <source src="{% static 'vid-b.mp4' %}" type="video/mp4" />
+                <source src="{% static 'vid-b.webm' %}" type="video/webm" />
             </video>
         </div>
         <div class="about">Neuro is a creative agency harnessing advanced technologies to create a sustainable future for the Fashion Industry</div>
@@ -14,7 +16,20 @@
         {% include 'services/services.html' %}
     </div>
     <div class="slide" style="top: {{ agency_offsets_2 }}00%">
-        {% include "work/work.html" %}
+
+    {% for project in project_list  %}
+        <div class="slide" style="top: {{ agency_offsets_3 + forloop.counter0 }}00%">
+            <div class="content__inner--scroll">
+                <div class="col">
+                    <h2>{{ project.name }}</h2>
+                    <p>{{ project.description }}</p>
+                </div>
+                {% for image in project.projectimage_set.all %}
+                    <img src="{{ image.image.url }}">
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
     </div>
     <div class="slide" style="top: {{ agency_offsets_3 }}00%">
         {% include "profiles/team.html" %}

@@ -10,8 +10,6 @@
         <div class="filter" data-action="11" data-id="6">SHOES</div>
     </div>
     {% for p in product_list %}
-    <a class="grid__item">
-        <img src="{{ p.thumbnail.url }}" alt="{{ p.name }}" />
-    </a>
+        <img data-action="3" data-id="{{ p.id }}" class="grid__item--thumb" src="{{ p.thumbnail.url }}" alt="{{ p.name }}" />
     {% endfor %}
 </div>
