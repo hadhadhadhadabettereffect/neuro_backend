@@ -18,7 +18,7 @@
     <div class="slide" style="top: {{ agency_offsets_2 }}00%">
 
     {% for project in project_list  %}
-        <div class="slide" style="top: {{ agency_offsets_3 + forloop.counter0 }}00%">
+    <div class="slide" style="top:{{agency_offsets_2|add:forloop.counter}}00%">
             <div class="content__inner--scroll">
                 <div class="col">
                     <h2>{{ project.name }}</h2>

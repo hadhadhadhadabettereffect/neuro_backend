@@ -1,17 +1,39 @@
 <div class="slide" style="top:300%">
     <div class="content__inner">
         <div class="grid">
-            <div class="grid__item--wide"></div>
-            <div class="grid__item"></div>
-            <div class="grid__item"></div>
-            <div class="grid__item"></div>
-            <div class="grid__item"></div>
-            <div class="grid__item"></div>
-            <div class="grid__item--wide"></div>
-            <div class="grid__item--wide"></div>
-            <div class="grid__item"></div>
-            <div class="grid__item"></div>
-            <div class="grid__item"></div>
+            {% for press_item in press_list %}
+                {% if press_item.item_type == 1 %}
+                    {% if press_item.link|length > 0 %}
+                    <a href="{{ press_item.link }}">
+                    {% endif %}
+                    <img class="grid__item" src="media/{{ press_item.image }}"/>
+                    {% if press_item.link|length > 0 %}
+                    </a>
+                    {% endif %}
+                {% else %}
+                    <div class="grid__item--wide">
+                        {% if press_item.link|length > 0 %}
+                        <a href="{{ press_item.link }}">
+                        {% endif %}
+                            <p class="press__quote">
+                                {{ press_item.quote }}
+                            </p>
+                            {% if press_item.author %}
+                            <p class="press__author">
+                                {{ press_item.author }}
+                            </p>
+                            {% endif %}
+                            {% if press_item.publication %}
+                            <p class="press__publication">
+                                {{ press_item.publication }}
+                            </p>
+                            {% endif %}
+                        {% if press_item.link|length > 0 %}
+                        </a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </div>

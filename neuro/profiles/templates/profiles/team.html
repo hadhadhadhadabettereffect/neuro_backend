@@ -1,24 +1,11 @@
 <div class="content__inner--stack">
     <div class="slide__inner">
+        {% for profile in profile_list %}
         <div class="staff">
-            <img class="staff__photo" />
-            <div class="staff__name">Clement Balavoine</div>
-            <div class="staff__title">FOUNDER / CCO</div>
+            <img class="staff__photo" src="{{ profile.picture.url }}" />
+            <div class="staff__name">{{ profile.name }}</div>
+            <div class="staff__title">{{ profile.title }}</div>
         </div>
-        <div class="staff">
-            <img class="staff__photo" />
-            <div class="staff__name">Janis Sne</div>
-            <div class="staff__title">CREATIVE DIRECTOR</div>
-        </div>
-        <div class="staff">
-            <img class="staff__photo" />
-            <div class="staff__name">Bianca Bennett</div>
-            <div class="staff__title">BUSINESS MANAGER</div>
-        </div>
-        <div class="staff">
-            <img class="staff__photo" />
-            <div class="staff__name">Jeremy Hanover</div>
-            <div class="staff__title">DESIGNER</div>
-        </div>
+        {% endfor %}
     </div>
 </div>
