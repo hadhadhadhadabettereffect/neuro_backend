@@ -1,0 +1,7 @@
+{% load static %}
+<div class="full" id="home">
+    {% if home_video|length %}
+    <video class="video" playsinline autoplay muted loop poster={{home_video|add:'.jpg'}}>
+    </video>
+    {% endif %}
+</div>

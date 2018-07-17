@@ -9,12 +9,7 @@
 </head>
 
 <body>
-    <div class="full" id="home">
-        <video class="video" playsinline autoplay muted loop poster="{% static 'vid-a.jpg' %}">
-            <source src="{% static 'vid-a.mp4' %}" type="video/mp4">
-            <source src="{% static 'vid-a.webm' %}" type="video/webm">
-        </video>
-    </div>
+    {% include 'home.html' %}
     <div id="wrap">
         <div id="content">
             {% include 'agency.html' %}
@@ -30,6 +25,7 @@
         </div>
         <div class="close icon icon-x" data-action="10"></div>
     </div>
+    {% include 'vars.html' %}
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 </body>
 

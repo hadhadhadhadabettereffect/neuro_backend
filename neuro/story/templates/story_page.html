@@ -1,0 +1,24 @@
+<div class="content__inner">
+    <h1>{{page_type}}</h1>
+    <p>{{ image_a }}</p>
+    {% if page_type == 0 %}
+        <div class="col--text">
+            <h2>{{ title }}</h2>
+            <p>{{ text }}</p>
+        </div>
+        <div class="col--img">
+            <img src="{{ image_a.url }}" />
+        </div>
+    {% else %}
+    <div class="slider-wrap">
+        <div class="slider__top">
+            <div class="slider__bar" data-action="13"></div>
+            <img src="{{ image_a.url }}" />
+        </div>
+        <div class="slider__btm">
+            <img src="{{ image_b.url }}" />
+        </div>
+    </div>
+    {% endif %}
+</div>
+

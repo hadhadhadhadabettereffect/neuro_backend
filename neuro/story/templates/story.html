@@ -1,16 +1,10 @@
-{% load static %}
-{% for page in storypage_list %}
 <div class="content__inner">
-    {% if page.page_type is 0 %}
-        {% include 'story/text_page.html' %}
-    {% else %}
-        {% include 'story/slider_page.html' %}
-    {% endif %}
+    <div id="story__content"></div>
+    <ol id="story__nav">
+        {% for page in storypage_list %}
+        <li class="story__link" data-action="12" data-id="{{ forloop.counter0 }}">
+            {{ forloop.counter }}
+        </li>
+        {% endfor %}
+    </ol>
 </div>
-{% endfor %}
-
-<ol id="story-nav">
-    {% for page in storypage_list %}
-    <li class="story__link" data-action="12" data-id="{{ page.id }}">{{ page.id }}</li>
-    {% endfor %}
-</ol>

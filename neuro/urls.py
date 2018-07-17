@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('neuro.pages.urls')),
     path('products/', include('neuro.products.urls')),
+    path('story/', include('neuro.story.urls')),
 ]
 
 if settings.DEBUG:

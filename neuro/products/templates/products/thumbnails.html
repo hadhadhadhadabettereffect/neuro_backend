@@ -1,15 +1,20 @@
 {% load static %}
 <div class="content__inner">
-    <div id="filters">
-        <div class="filter--active" data-action="11" data-id="0">ALL</div>
-        <div class="filter" data-action="11" data-id="1">DRESS</div>
-        <div class="filter" data-action="11" data-id="2">ACCESSORIES</div>
-        <div class="filter" data-action="11" data-id="3">JACKETS</div>
-        <div class="filter" data-action="11" data-id="4">PANTS</div>
-        <div class="filter" data-action="11" data-id="5">TOPS</div>
-        <div class="filter" data-action="11" data-id="6">SHOES</div>
+    <div class="content__inner__top">
+        <h2>COLLECTION OVERVIEW</h2>
+        <div id="filters">
+            <div class="filter--active" data-action="11" data-id="0">ALL</div>
+            <div class="filter" data-action="11" data-id="1">DRESS</div>
+            <div class="filter" data-action="11" data-id="2">ACCESSORIES</div>
+            <div class="filter" data-action="11" data-id="3">JACKETS</div>
+            <div class="filter" data-action="11" data-id="4">PANTS</div>
+            <div class="filter" data-action="11" data-id="5">TOPS</div>
+            <div class="filter" data-action="11" data-id="6">SHOES</div>
+        </div>
     </div>
+    <div class="grid">
     {% for p in product_list %}
         <img data-action="3" data-id="{{ p.id }}" class="grid__item--thumb" src="{{ p.thumbnail.url }}" alt="{{ p.name }}" />
     {% endfor %}
+    </div>
 </div>

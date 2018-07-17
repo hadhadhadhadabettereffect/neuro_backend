@@ -1,16 +1,14 @@
 {% load static %}
-
-<div id="agency">
+<div id="agency" style="display:none;">
     <div class="slide">
+        {% if agency_video|length %}
         <div class="video-wrap">
-            <video class="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" poster="{% static 'vid-b.jpg' %}">
-                <source src="{% static 'vid-b.mp4' %}" type="video/mp4" />
-                <source src="{% static 'vid-b.webm' %}" type="video/webm" />
+            <video class="video" playsinline autoplay muted loop poster={{agency_video|add:'.jpg'}}>
             </video>
         </div>
-        <div class="about">Neuro is a creative agency harnessing advanced technologies to create a sustainable future for the Fashion Industry</div>
-        <a
-            id="contact--agency" data-action="2">CONTACT</a>
+        {% endif %}
+        <p class="about">Neuro is a creative agency harnessing advanced technologies to create a sustainable future for the Fashion Industry</p>
+        <a id="contact--agency" data-action="2">CONTACT</a>
     </div>
     <div class="slide" style="top: {{ agency_offsets_1 }}00%">
         {% include 'services/services.html' %}
