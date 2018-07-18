@@ -1,5 +1,22 @@
 <div class="content__inner">
-    <div id="story__content"></div>
+    <div id="story__content">
+        <div id="story-page--text">
+            <div class="col--text">
+                <h2></h2>
+                <p></p>
+            </div>
+            <div class="col--img">
+                <img />
+            </div>
+        </div>
+        <div id="story-page--slider">
+            <div class="slider__top">
+                <div class="slider__bar" data-action="13"></div>
+            </div>
+            <img class="slider__btm"/>
+        </div>
+
+    </div>
     <ol id="story__nav">
         {% for page in storypage_list %}
         <li class="story__link" data-action="12" data-id="{{ forloop.counter0 }}">
