@@ -9,7 +9,7 @@ from neuro.press.models import PressItem
 from neuro.profiles.models import Profile
 from neuro.story.models import StoryPage
 
-agency_offsets = [0,1,2,3+Product.objects.count()]
+agency_offsets = [0,1,2,2 + Project.objects.count()]
 collection_offsets = [0,2,3,4]
 agency_video = ""
 collection_video = "static/Neuro-Campaign"

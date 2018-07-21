@@ -14,7 +14,7 @@
     </div>
     <div class="grid">
     {% for p in product_list %}
-        <img data-action="3" data-id="{{ p.id }}" class="grid__item--thumb" src="{{ p.thumbnail.url }}" alt="{{ p.name }}" />
+        <img data-action="3" data-id="{{ forloop.counter0 }}" class="grid__item--thumb" src="{{ p.thumbnail.url }}" alt="{{ p.name }}" />
     {% endfor %}
     </div>
 </div>

@@ -1,4 +1,3 @@
-{% load static %}
 <div id="collection" style="display:none;">
     <div class="slide">
         {% if collection_video|length %}
@@ -10,7 +9,6 @@
         <a id="contact--collection" data-action="2">CONTACT</a>
     </div>
     <div class="slide" style="top: 100%">
-        campaign
     </div>
     <div class="slide" style="top: {{ collection_offsets_1 }}00%">
         {% include "products/thumbnails.html" %}

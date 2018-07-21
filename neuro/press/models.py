@@ -6,7 +6,7 @@ class PressItem(OrderedModel):
     PRESS_TYPES = ["quote", "image"]
     name = models.CharField(max_length=200, blank=True)
     item_type = models.IntegerField(
-        choices=list(enumerate(PRESS_TYPES, 1)),
+        choices=list(enumerate(PRESS_TYPES, 0)),
         default=0)
     image = models.ImageField(upload_to="images", blank=True, null=True)
     quote = models.TextField(blank=True)
